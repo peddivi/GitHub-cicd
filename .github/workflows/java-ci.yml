@@ -15,7 +15,27 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: [build]
-    
+
     steps:
       - name: run test cases
         run: echo test cases
+
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sonar qube
+      run: echo sonar qube
+
+  checkmarx-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkmarx-scan
+        run: echo checkmarx-scan
+  
+  sonaType:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sonaType
+        run: echo sona type
+
+
