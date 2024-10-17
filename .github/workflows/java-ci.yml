@@ -21,18 +21,21 @@ jobs:
         run: echo test cases
 
   sonarqube:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
     - name: sonar qube
       run: echo sonar qube
 
   checkmarx-scan:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
       - name: checkmarx-scan
         run: echo checkmarx-scan
   
   sonaType:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
       - name: sonaType
