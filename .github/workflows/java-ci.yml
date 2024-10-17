@@ -1,1 +1,21 @@
+name: java-ci-build
 
+on: 
+  workflow_call:
+    
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: maven clean
+        run: echo maven clean
+  
+  test:
+    runs-on: ubuntu-latest
+    needs: [build]
+    
+    steps:
+      - name: run test cases
+        run: echo test cases
